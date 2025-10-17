@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReservArte - Gestión de Ventas</title>
+  <link rel="stylesheet" href="../css/GestionVentas.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="../admin.html">
+      <div class="logos">
+        <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+      </div>
+    </a>
+    <div class="titulo">
+      <h1>ReservArte</h1>
+    </div>
+    <div class="heads">
+      <div><a href="../index.html" class="menu">Menu Principal</a></div>
+      <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
+      <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
+      <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
+    </div>
+    <div class="head">
+      <a href="../inicio.html"><button class="iniciar"> Iniciar Sesión </button></a>
+      <a href="../registrar.html"><button class="iniciar"> Registrarse </button></a>
+    </div>
+  </header>
+
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Administrador</h2>
+      <ul>
+        <li><a href="dashboard.html">🕹️ Dashboard</a></li>
+        <li><a href="Gestion de Eventos.html">🎟️ Gestión de Eventos</a></li>
+        <li><a href="Gestion De Ventas.html">💰 Gestión de Ventas</a></li>
+        <li><a href="Gestion de usuarios.html">👥 Gestión de Usuarios</a></li>
+        <li><a href="Graficas Generales.html">📊 Gráficas Generales</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal - Gestión de Ventas -->
+    <main class="main-content">
+      <h1>💰 Gestión de Ventas</h1>
+      <p class="subtitulo">Visualiza todas las ventas realizadas por los vendedores.</p>
+
+      <!-- Barra de búsqueda y filtros -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar por comprador...">
+
+        <select>
+          <option value="">Filtrar por categoría</option>
+          <option value="musica">Música</option>
+          <option value="deporte">Deporte</option>
+          <option value="teatro">Teatro</option>
+        </select>
+
+        <select>
+          <option value="">Filtrar por vendedor</option>
+          <option value="juan">Juan Pérez</option>
+          <option value="ana">Ana Gómez</option>
+          <option value="lucia">Lucía Torres</option>
+        </select>
+
+        <!-- NUEVOS CAMPOS DE FILTRO POR FECHA -->
+        <label for="fecha-inicio">Desde:</label>
+        <input type="date" id="fecha-inicio">
+
+        <label for="fecha-fin">Hasta:</label>
+        <input type="date" id="fecha-fin">
+
+        <button>Buscar</button>
+      </div>
+
+      <!-- Tabla de ventas -->
+      <div class="tabla-ventas">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Comprador</th>
+              <th>Evento</th>
+              <th>Vendedor</th>
+              <th>Boletos</th>
+              <th>Total</th>
+              <th>Fecha de Venta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>Carlos López</td>
+              <td>Festival de Música</td>
+              <td>Juan Pérez</td>
+              <td>2</td>
+              <td>$100</td>
+              <td>10/10/2025</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Laura Gómez</td>
+              <td>Festival de Música</td>
+              <td>Ana Gómez</td>
+              <td>1</td>
+              <td>$50</td>
+              <td>11/10/2025</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Pedro Martínez</td>
+              <td>Teatro Clásico</td>
+              <td>Lucía Torres</td>
+              <td>3</td>
+              <td>$150</td>
+              <td>12/10/2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

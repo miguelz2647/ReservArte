@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReservArte - Gestión de Eventos</title>
+  <link rel="stylesheet" href="../css/GestionEventos.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="../admin.html">   
+      <div class="logos">
+        <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+      </div>
+    </a>
+    <div class="titulo">
+      <h1>ReservArte</h1>
+    </div>
+    <div class="heads">
+      <div><a href="../index.html" class="menu">Menu Principal</a></div>
+      <div><a href="../Galeria.html" class="menu">Festivales y eventos</a></div>
+      <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
+      <div><a href="../contactanos.html" class="menu">Contactanos</a></div>
+    </div>
+    <div class="head">
+      <a href="../inicio.html"><button class="iniciar">Iniciar Sesión</button></a>
+      <a href="../registrar.html"><button class="iniciar">Registrarse</button></a>
+    </div>
+  </header> 
+
+  <!-- Contenedor principal -->
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Administrador</h2>
+      <ul>
+        <li><a href="dashboard.html">🕹️ Dashboard</a></li>
+        <li><a href="Gestion de Eventos.html">🎟️ Gestión de Eventos</a></li>
+        <li><a href="Gestion De Ventas.html">💰 Gestión de Ventas</a></li>
+        <li><a href="Gestion de usuarios.html">👥 Gestión de Usuarios</a></li>
+        <li><a href="Graficas Generales.html">📊 Gráficas Generales</a></li>
+
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <h1>🎟️ Gestión de Eventos</h1>
+      <p class="subtitulo">Visualiza los eventos y las ventas de cada vendedor.</p>
+
+      <!-- Barra de búsqueda y filtros -->
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar por nombre de evento...">
+        <select>
+          <option value="">Filtrar por estado</option>
+          <option value="activo">Activo</option>
+          <option value="pendiente">Pendiente</option>
+          <option value="cerrado">Cerrado</option>
+        </select>
+        <button>Buscar</button>
+      </div>
+
+      <div class="cards-eventos">
+        <!-- Evento 1 -->
+        <div class="card-evento">
+          <h2>Festival de Música</h2>
+          <p>
+            <span class="fecha-evento"><strong>Fecha:</strong> 25/10/2025</span> | 
+            <span class="cierre-ventas"><strong>Cierre de ventas:</strong> 24/10/2025</span>
+          </p>
+          <p><strong>Estado:</strong> <span class="estado activo">Activo</span></p>
+          <div class="vendedores-evento">
+            <h3>Vendedores:</h3>
+            <ul>
+              <li>Juan Pérez - 150 boletos - $7,500</li>
+              <li>Ana Gómez - 300 boletos - $15,000</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="card-evento">
+          <h2>Teatro Clásico</h2>
+          <p>
+            <span class="fecha-evento"><strong>Fecha:</strong> 02/11/2025</span> | 
+            <span class="cierre-ventas"><strong>Cierre de ventas:</strong> 01/11/2025</span>
+          </p>
+          <p><strong>Estado:</strong> <span class="estado activo">Activo</span></p>
+          <div class="vendedores-evento">
+            <h3>Vendedores:</h3>
+            <ul>
+              <li>Lucía Torres - 120 boletos - $6,000</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Evento 3 -->
+        <div class="card-evento">
+          <h2>Exposición de Arte</h2>
+          <p>
+            <span class="fecha-evento"><strong>Fecha:</strong> 15/11/2025</span> | 
+            <span class="cierre-ventas"><strong>Cierre de ventas:</strong> 14/11/2025</span>
+          </p>
+          <p><strong>Estado:</strong> <span class="estado pendiente">Pendiente</span></p>
+          <div class="vendedores-evento">
+            <h3>Vendedores:</h3>
+            <ul>
+              <li>Pedro Martínez - 0 boletos - $0</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Evento 4 -->
+        <div class="card-evento">
+          <h2>Concierto de Jazz</h2>
+          <p>
+            <span class="fecha-evento"><strong>Fecha:</strong> 20/12/2025</span> | 
+            <span class="cierre-ventas"><strong>Cierre de ventas:</strong> 19/12/2025</span>
+          </p>
+          <p><strong>Estado:</strong> <span class="estado pendiente">Pendiente</span></p>
+          <div class="vendedores-evento">
+            <h3>Vendedores:</h3>
+            <ul>
+              <li>Pedro Martínez - 0 boletos - $0</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Evento 5 -->
+        <div class="card-evento">
+          <h2>Festival de Rock</h2>
+          <p>
+            <span class="fecha-evento"><strong>Fecha:</strong> 05/01/2026</span> | 
+            <span class="cierre-ventas"><strong>Cierre de ventas:</strong> 04/01/2026</span>
+          </p>
+          <p><strong>Estado:</strong> <span class="estado activo">Activo</span></p>
+          <div class="vendedores-evento">
+            <h3>Vendedores:</h3>
+            <ul>
+              <li>Juan Pérez - 200 boletos - $10,000</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

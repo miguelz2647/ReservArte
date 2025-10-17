@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReservArte - Gráficas Generales</title>
+  <link rel="stylesheet" href="../css/Grafias.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="../admin.html">
+      <div class="logos">
+        <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+      </div>
+    </a>
+    <div class="titulo"><h1>ReservArte</h1></div>
+    <div class="heads">
+      <div><a href="../index.html" class="menu">Menu Principal</a></div>
+      <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
+      <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
+      <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
+    </div>
+    <div class="head">
+      <a href="../inicio.html"><button class="iniciar"> Iniciar Sesión </button></a>
+      <a href="../registrar.html"><button class="iniciar"> Registrarse </button></a>
+    </div>
+  </header>
+
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Administrador</h2>
+      <ul>
+        <li><a href="dashboard.html">🕹️ Dashboard</a></li>
+        <li><a href="Gestion de Eventos.html">🎟️ Gestión de Eventos</a></li>
+        <li><a href="Gestion De Ventas.html">💰 Gestión de Ventas</a></li>
+        <li><a href="Gestion de usuarios.html">👥 Gestión de Usuarios</a></li>
+        <li><a href="Graficas Generales.html">📊 Gráficas Generales</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <h1>📊 Gráficas Generales</h1>
+      <p class="subtitulo">Visualiza todas las estadísticas importantes del sistema.</p>
+
+      <!-- Gráficas Circulares Generales -->
+      <div class="graficas-container">
+        <div class="grafica-card">
+          <h3>Ventas Completadas vs Pendientes</h3>
+          <canvas id="ventasChart"></canvas>
+        </div>
+
+        <div class="grafica-card">
+          <h3>Estado de Eventos</h3>
+          <canvas id="eventosChart"></canvas>
+        </div>
+
+        <div class="grafica-card">
+          <h3>Usuarios por Rol</h3>
+          <canvas id="usuariosChart"></canvas>
+        </div>
+      </div>
+
+      <h2 class="subtitulo">📈 Estadísticas Específicas</h2>
+
+      <!-- Gráficas de barras verticales -->
+      <div class="graficas-container">
+        <div class="grafica-card">
+          <h3>Boletos Vendidos por Evento</h3>
+          <canvas id="boletosChart"></canvas>
+        </div>
+
+        <div class="grafica-card">
+          <h3>Ingresos por Vendedor</h3>
+          <canvas id="ingresosChart"></canvas>
+        </div>
+
+        <div class="grafica-card">
+          <h3>Ventas por Tipo de Evento</h3>
+          <canvas id="tipoEventoChart"></canvas>
+        </div>
+
+        <div class="grafica-card">
+          <h3>Eventos Pendientes vs Activos</h3>
+          <canvas id="estadoEventosChart"></canvas>
+        </div>
+
+        <div class="grafica-card">
+          <h3>Usuarios Registrados por Mes</h3>
+          <canvas id="usuariosMesChart"></canvas>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/graficas.js"></script>
+</body>
+</html>

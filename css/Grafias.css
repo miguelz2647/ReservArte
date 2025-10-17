@@ -1,0 +1,44 @@
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+a { text-decoration: none; }
+
+/* Estructura principal */
+html, body { height: 100%; display: flex; flex-direction: column; font-family: Arial, sans-serif; background: #181818; }
+
+/* Header */
+.header { background-color: #1b130f; color: white; text-align: center; display: flex; }
+.titulo { color: #f4d7b1; font-family: cursive; padding-top: 30px; }
+.logos { margin: 10px; margin-left: 20px; }
+.img { width: 80px; height: 80px; border-radius: 5px; }
+.iniciar { border: none; padding: 15px; background-color: #f4d7b1; color: black; cursor: pointer; border-radius: 4px; transition: 0.3s ease; }
+.iniciar:hover { background-color: #cda776; transform: scale(1.05); }
+.head { gap: 10px; display: flex; padding: 30px; justify-content: center; width: 50%; }
+.heads { display: flex; width: 100%; margin: 30px 90px 30px 100px; padding: 10px; justify-content: space-around; }
+
+/* Menú */
+.menu { text-decoration: none; font-family: cursive; color: #f4d7b1; font-weight: bolder; border-radius: 10px; transition: color 0.3s ease, text-shadow 0.3s ease; }
+.menu:hover { color: #ffcf87; text-shadow: 0 0 10px #ffcf87; }
+
+/* Contenedor principal */
+.admin-container { flex: 1; display: flex; }
+
+/* Sidebar */
+.sidebar { width: 250px; background-color: #2a1c14; padding: 20px; box-shadow: 4px 0 15px rgba(0, 0, 0, 0.7); z-index: 10; }
+.sidebar h2 { margin-bottom: 20px; font-size: 18px; color: #ffcc80; }
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar ul li { margin: 15px 0; }
+.sidebar ul li a { color: #fdfdfd; text-decoration: none; font-size: 15px; display: block; padding: 10px; border-radius: 8px; transition: background 0.3s; }
+.sidebar ul li a:hover { background: #3f2a20; }
+
+/* Main content */
+.main-content { flex: 1; padding: 30px; background: #181818; overflow-y: auto; }
+.main-content h1 { margin-bottom: 10px; color: #ffcc80; }
+.subtitulo { margin-bottom: 20px; color: #bbb; }
+
+/* Gráficas */
+.graficas-container { display: flex; flex-wrap: wrap; gap: 25px; }
+.grafica-card { background: #2a1c14; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); flex: 1 1 300px; }
+.grafica-card h3 { color: #f4d7b1; margin-bottom: 12px; font-family: cursive; text-align: center; }
+canvas { background: #1b130f; border-radius: 12px; padding: 10px; }
+.grafica-card:hover { transform: scale(1.02); transition: transform 0.3s ease; }

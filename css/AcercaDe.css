@@ -1,0 +1,152 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+a { text-decoration: none; }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0b0b0b;
+  color: #f4d7b1;
+}
+
+/* Header */
+.header {
+  background-color: #1b130f;
+  color: white;
+  text-align: center;
+  display: flex;
+}
+
+.titulo {
+  color: #f4d7b1;
+  font-family: cursive;
+  padding-top: 20px;
+}
+
+.logos {
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.iniciar {
+  border: none;
+  padding: 15px;
+  background-color: #f4d7b1;
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.iniciar:hover {
+  background-color: #cda776;
+  transform: scale(1.05);
+}
+
+.head {
+  gap: 10px;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  width: 50%;
+}
+
+.heads {
+  display: flex;
+  width: 100%;
+  margin: 30px;
+  margin-left: 100px;
+  margin-right: 90px;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+/* MENÚ CON HOVER DORADO */
+.menu {
+  text-decoration: none;
+  font-family: cursive;
+  color: #f4d7b1;
+  font-weight: bolder;
+  border-radius: 10px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu:hover {
+  color: #ffcf87;
+  text-shadow: 0 0 10px #ffcf87;
+}
+/* Main */
+.main { padding: 40px 20px; text-align: center; }
+.titulo-conciertos h1 { color: #d99c63; margin-bottom: 10px; }
+.titulo-conciertos p { opacity: 0.8; margin-bottom: 30px; }
+
+/* Tarjetas Misión, Visión, Historia */
+.contenedor-tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.concierto {
+  background-color: #1b130f;
+  padding: 25px;
+  width: 350px;
+  border-radius: 12px;
+  text-align: justify;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.concierto:hover { transform: scale(1.05); box-shadow: 0 0 15px #b67441; }
+.concierto h2 { color: #ffb973; margin-bottom: 15px; }
+.concierto p { line-height: 1.6; }
+
+/* Valores */
+.valores { margin: 50px 0; }
+.valores h2 { color: #ffb973; margin-bottom: 20px; }
+.contenedor-valores { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.valor {
+ background-color: #1b130f;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.valor:hover { transform: scale(1.05); box-shadow: 0 0 10px #b67441; }
+
+/* Equipo */
+.equipo { margin-bottom: 50px; }
+.equipo h2 { color: #ffb973; margin-bottom: 20px; }
+.contenedor-equipo { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+.miembro {
+  background-color: #3f2a20;
+  padding: 20px;
+  width: 250px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.miembro:hover { transform: scale(1.05); box-shadow: 0 0 15px #b67441; }
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+.logo-footer img { width: 224px; height: 150px; margin-bottom: 15px; }
+.line-container { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 10px; }
+.line1, .line2 { flex: 1; height: 1px; background: linear-gradient(to right, #b67441, transparent); }
+.line1 { background: linear-gradient(to left, #b67441, transparent); }
+.logo img { height: 50px; }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .contenedor-tarjetas, .contenedor-valores, .contenedor-equipo { flex-direction: column; align-items: center; gap: 20px; }
+  .head, .heads { flex-direction: column; gap: 10px; }
+}
