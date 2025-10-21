@@ -1,0 +1,274 @@
+:root {
+  --bg: #0b0b0b;
+  --panel: #1b130f;
+  --card: #1a1a1a;
+  --accent: #f5d486;
+  --accent2: #f5a623;
+  --muted: #ccc;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  margin: 0;
+}
+
+
+
+/* Header */
+/* Estructura general */
+.header {
+  background-color: #1b130f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+}
+
+.titulo {
+  color: #f4d7b1;
+  font-family: cursive;
+  text-align: center;
+}
+
+.logos {
+  margin-right: 15px;
+}
+
+.img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.heads {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex: 1;
+}
+
+.menu {
+  text-decoration: none;
+  font-family: cursive;
+  color: #f4d7b1;
+  font-weight: bolder;
+  border-radius: 10px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu:hover {
+  color: #ffcf87;
+  text-shadow: 0 0 10px #ffcf87;
+}
+
+/* Botones */
+.head {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iniciar {
+  border: none;
+  padding: 10px 15px;
+  background-color: #f4d7b1;
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.iniciar:hover {
+  background-color: #cda776;
+  transform: scale(1.05);
+}
+
+/* 🔹 Carrito */
+.carrito-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-carrito {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.logo-carrito:hover {
+  transform: scale(1.1);
+  filter: brightness(1) invert(0.2);
+}
+
+.carrito-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: var(--card);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(245, 212, 134, 0.1);
+}
+
+.carrito-container h2 {
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.carrito-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #231913;
+  border-radius: 10px;
+  padding: 15px;
+  transition: background 0.3s ease;
+}
+
+.carrito-item:hover {
+  background-color: #2e211a;
+}
+
+.item-info h3 {
+  color: var(--accent);
+  margin: 0;
+}
+
+.item-cantidad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-cantidad input {
+  width: 60px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #141414;
+  color: #fff;
+  padding: 5px;
+}
+
+.item-total p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.btn-eliminar {
+  background-color: transparent;
+  color: #f55;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+.btn-eliminar:hover {
+  color: #ff9999;
+}
+
+/* ====== Resumen ====== */
+.carrito-resumen {
+  background-color: #1f1a14;
+  margin-top: 30px;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.carrito-resumen h3 {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+.carrito-resumen p {
+  margin: 6px 0;
+  font-size: 0.95em;
+}
+
+.carrito-resumen .total-final {
+  font-size: 1.2em;
+  color: var(--accent2);
+}
+
+.acciones {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.btn-seguir, .btn-pagar {
+  background-color: var(--accent2);
+  color: #0b0b0b;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-seguir:hover, .btn-pagar:hover {
+  background-color: #f7c76a;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.imgs {
+  width: 224px;
+  height: 150px;
+}
+
+.titulo-footer {
+  color: #f4d7b1;
+  font-family: cursive;
+  justify-content: center;
+  display: flex;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.line1 {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to left, #b67441, transparent);
+}
+
+.line2 {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, #b67441, transparent);
+}
+
+.logo img {
+  height: 50px;
+}

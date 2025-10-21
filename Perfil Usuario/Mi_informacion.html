@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReservArte - Información del Usuario</title>
+  <link rel="stylesheet" href="../css/perfil.css" />
+</head>
+<body>
+  <!-- Header -->
+<header class="header">
+  <a href="index.html">
+    <div class="logos">
+      <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+    </div>
+  </a>
+
+  <div class="titulo">
+    <h1>ReservArte</h1>
+  </div>
+
+  <div class="heads">
+    <div><a href="../index.html" class="menu">Menu Principal</a></div>
+    <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
+    <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
+    <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
+  </div>
+
+  <div class="head">
+    <a href="../inicio.html"><button class="iniciar">Iniciar Sesión</button></a>
+    <a href="../registrar.html"><button class="iniciar">Registrarse</button></a>
+
+    <!-- 🔹 Logo del carrito integrado -->
+    <a href="../carritoCompras.html" class="carrito-link">
+      <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
+    </a>
+  </div>
+</header>
+  <!-- Contenedor principal -->
+  <section class="perfil-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>ReservArte</h2>
+      <ul>
+        <li><a href="perfil.html">🏠 Bienvenida</a></li>
+        <li><a href="Mi_informacion.html" class="active">👤 Mi Información</a></li>
+        <li><a href="Historial.html">🧾 Historial de Compras</a></li>
+        <li><a href="perfil-boletas.html">🎟️ Boletas Activas</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido -->
+    <main class="perfil-content">
+      <h1>Mi Información</h1>
+
+      <!-- Card superior del usuario -->
+      <div class="perfil-header">
+        <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Usuario" class="perfil-avatar" />
+        <div>
+          <h2>Miguel Zapata</h2>
+          <p>Miembro desde 2023</p>
+        </div>
+      </div>
+
+      <!-- Mensaje de éxito (visual) -->
+      <p class="mensaje-exito">✔️ Tu información se ha actualizado correctamente.</p>
+
+      <div class="info-cards">
+        <!-- Card 1: Información actual -->
+        <div class="info-card">
+          <h2>👤 Información del Usuario</h2>
+          <p><strong>Nombre:</strong> Miguel Zapata</p>
+          <p><strong>Correo:</strong> miguel@example.com</p>
+          <p><strong>CC (Documento de Identificación):</strong> 1034990999</p>
+          <p><strong>Contraseña:</strong> *******</p>
+        </div>
+
+        <!-- Card 2: Actualizar información -->
+        <div class="info-card">
+          <h2>✏️ Actualizar Información</h2>
+          <form class="update-form">
+            <label for="nombre">Nombre:</label>
+            <input id="nombre" type="text" placeholder="Actualiza tu nombre" />
+
+            <label for="correo">Correo:</label>
+            <input id="correo" type="email" placeholder="Actualiza tu correo" />
+
+            <label for="cc">CC (Documento de Identificación):</label>
+            <input id="cc" type="text" placeholder="Actualiza tu número" />
+
+            <label for="contrasena">Contraseña:</label>
+            <input id="contrasena" type="password" placeholder="Actualiza tu contraseña" />
+
+            <button type="submit" class="update-btn">Guardar Cambios</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Opción de método de pago -->
+      <div class="metodo-pago">
+        <h2>💳 Método de Pago Predeterminado</h2>
+        <form>
+          <label><input type="radio" name="pago" checked /> Tarjeta de crédito / débito</label><br />
+          <label><input type="radio" name="pago" /> Transferencia bancaria</label><br />
+          <label><input type="radio" name="pago" /> PayPal</label>
+        </form>
+      </div>
+    </main>
+  </section>
+</body>
+</html>

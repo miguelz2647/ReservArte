@@ -7,18 +7,94 @@ a { text-decoration: none; }
 html, body { height: 100%; display: flex; flex-direction: column; font-family: Arial, sans-serif; background: #181818; }
 
 /* Header */
-.header { background-color: #1b130f; color: white; text-align: center; display: flex; }
-.titulo { color: #f4d7b1; font-family: cursive; padding-top: 30px; }
-.logos { margin: 10px; margin-left: 20px; }
-.img { width: 80px; height: 80px; border-radius: 5px; }
-.iniciar { border: none; padding: 15px; background-color: #f4d7b1; color: black; cursor: pointer; border-radius: 4px; transition: 0.3s ease; }
-.iniciar:hover { background-color: #cda776; transform: scale(1.05); }
-.head { gap: 10px; display: flex; padding: 30px; justify-content: center; width: 50%; }
-.heads { display: flex; width: 100%; margin: 30px 90px 30px 100px; padding: 10px; justify-content: space-around; }
+/* Estructura general */
+.header {
+  background-color: #1b130f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+}
 
-/* Menú */
-.menu { text-decoration: none; font-family: cursive; color: #f4d7b1; font-weight: bolder; border-radius: 10px; transition: color 0.3s ease, text-shadow 0.3s ease; }
-.menu:hover { color: #ffcf87; text-shadow: 0 0 10px #ffcf87; }
+.titulo {
+  color: #f4d7b1;
+  font-family: cursive;
+  text-align: center;
+}
+
+.logos {
+  margin-right: 15px;
+}
+
+.img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.heads {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex: 1;
+}
+
+.menu {
+  text-decoration: none;
+  font-family: cursive;
+  color: #f4d7b1;
+  font-weight: bolder;
+  border-radius: 10px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu:hover {
+  color: #ffcf87;
+  text-shadow: 0 0 10px #ffcf87;
+}
+
+/* Botones */
+.head {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iniciar {
+  border: none;
+  padding: 10px 15px;
+  background-color: #f4d7b1;
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.iniciar:hover {
+  background-color: #cda776;
+  transform: scale(1.05);
+}
+
+/* 🔹 Carrito */
+.carrito-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-carrito {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.logo-carrito:hover {
+  transform: scale(1.1);
+  filter: brightness(1) invert(0.2);
+}
 
 /* Contenedor principal */
 .admin-container { flex: 1; display: flex; }
