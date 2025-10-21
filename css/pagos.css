@@ -1,0 +1,219 @@
+:root{
+  --bg: #0b0b0b;
+  --panel: #1c1c1c;
+  --card: #1a1a1a;
+  --accent: #f5a623;
+  --muted: #ccc;
+}
+
+* { box-sizing: border-box; }
+body{
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+/* Estructura general */
+.header {
+  background-color: #1b130f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+}
+
+.titulo {
+  color: #f4d7b1;
+  font-family: cursive;
+  text-align: center;
+}
+
+.logos {
+  margin-right: 15px;
+}
+
+.img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.heads {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex: 1;
+}
+
+.menu {
+  text-decoration: none;
+  font-family: cursive;
+  color: #f4d7b1;
+  font-weight: bolder;
+  border-radius: 10px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu:hover {
+  color: #ffcf87;
+  text-shadow: 0 0 10px #ffcf87;
+}
+
+/* Botones */
+.head {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iniciar {
+  border: none;
+  padding: 10px 15px;
+  background-color: #f4d7b1;
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.iniciar:hover {
+  background-color: #cda776;
+  transform: scale(1.05);
+}
+
+/* 🔹 Carrito */
+.carrito-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-carrito {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.logo-carrito:hover {
+  transform: scale(1.1);
+  filter: brightness(1) invert(0.2);
+}
+
+
+h1, h2 {
+  font-family: cursive;
+  color: var(--accent);
+}
+
+/* Estructura principal */
+.pago-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: var(--panel);
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(244, 215, 177, 0.15);
+}
+
+.pago-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+/* Resumen del pedido */
+.resumen-pedido {
+  flex: 1;
+  min-width: 350px;
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.resumen-pedido table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+.resumen-pedido th,
+.resumen-pedido td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.total-label {
+  text-align: right;
+  font-weight: bold;
+}
+
+.total-valor {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* Formulario de pago */
+.formulario-pago {
+  flex: 1;
+  min-width: 350px;
+  background-color: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.formulario-pago form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #111;
+  color: #fff;
+}
+
+.botones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-volver, .btn-pagar {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.btn-volver {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-volver:hover {
+  background-color: #555;
+}
+
+.btn-pagar {
+  background-color: var(--accent);
+  color: #000;
+}
+
+.btn-pagar:hover {
+  background-color: #e6b65c;
+}

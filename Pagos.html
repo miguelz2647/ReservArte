@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proceder con el Pago - ReservArte</title>
+  <link rel="stylesheet" href="/css/pagos.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html">
+      <div class="logos">
+        <img src="img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+      </div>
+    </a>
+
+    <div class="titulo">
+      <h1>ReservArte</h1>
+    </div>
+
+    <div class="heads">
+      <div><a href="index.html" class="menu">Menu Principal</a></div>
+      <div><a href="Galeria.html" class="menu">Festivales y Eventos</a></div>
+      <div><a href="acercaDe.html" class="menu">Acerca De..</a></div>
+      <div><a href="contactanos.html" class="menu">Contáctanos</a></div>
+    </div>
+
+    <div class="head">
+      <a href="inicio.html"><button class="iniciar">Iniciar Sesión</button></a>
+      <a href="registrar.html"><button class="iniciar">Registrarse</button></a>
+      <a href="carritoCompras.html" class="carrito-link">
+        <img src="img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="pago-container">
+    <h1>Proceder con el Pago</h1>
+
+    <section class="pago-contenido">
+
+      <!-- Resumen de pedido -->
+      <div class="resumen-pedido">
+        <h2>Resumen del pedido</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Evento</th>
+              <th>Zona</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Concierto Estelar</td>
+              <td>VIP</td>
+              <td>2</td>
+              <td>$200.000</td>
+            </tr>
+            <tr>
+              <td colspan="3" class="total-label">Total</td>
+              <td class="total-valor">$200.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Formulario de pago -->
+      <div class="formulario-pago">
+        <h2>Datos de pago</h2>
+        <form>
+        <label for="password">numero de identificacion</label>
+        <input type="number" id="CC"  placeholder="Ingresa tu Cedula de ciudadania (CC)" required>
+ 
+
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+
+          <label for="metodo">Método de pago:</label>
+          <select id="metodo" name="metodo" required>
+            <option value="">Seleccione...</option>
+            <option value="tarjeta">Tarjeta de crédito / débito</option>
+            <option value="pse">PSE</option>
+            <option value="nequi">Nequi / Daviplata</option>
+          </select>
+
+          <div class="botones">
+            <a href="carritoCompras.html" class="btn-volver">Volver al carrito</a>
+            <button type="submit" class="btn-pagar">Confirmar y pagar</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+</html>
