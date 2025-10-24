@@ -14,6 +14,20 @@ body {
   flex-wrap: wrap;
   padding: 10px 30px;
 }
+.logo-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-right: 10px;
+}
+
+.logo-perfil:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
 
 .titulo {
   color: #f4d7b1;
@@ -875,4 +889,117 @@ body {
   color: #666;
   font-size: 13px;
   margin-top: 10px;
+}
+
+.btn-cerrar {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-cerrar:hover {
+  background-color: #e60000;
+}
+/* ========================================= */
+/* Estilos ADAPTADOS para la Barra de Búsqueda */
+/* ========================================= */
+.search-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #2a1c14; /* Fondo oscuro */
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.search-bar .input-search,
+.search-bar .select-filter { /* Aplica el estilo al input y al select */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: #3f2a20; /* Fondo más claro que el contenedor */
+    color: #fff;
+    flex-grow: 1;
+    min-width: 150px; /* Evita que el select se comprima demasiado */
+    cursor: pointer;
+}
+
+.search-bar .input-search::placeholder {
+    color: #aaa;
+}
+
+/* Ajuste específico para el SELECT para asegurar el color del texto de las opciones */
+.search-bar .select-filter option {
+    background: #3f2a20; 
+    color: #fff;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background: #f4d7b1; /* Color crema/claro */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.search-bar button:hover {
+    background: #cda776;
+    transform: scale(1.05);
+}
+
+/* ========================================= */
+/* Estilos de Estado de la Tabla (Mantenidos) */
+/* ========================================= */
+.estado {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Colores para los diferentes estados */
+.estado-activo {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.estado-en-preventa {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.estado-pendiente {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.estado-finalizado {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+ .btn-secundario {
+  background-color: #cda776;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-secundario :hover {
+  background-color:  #cda776;
 }

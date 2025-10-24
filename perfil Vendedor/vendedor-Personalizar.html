@@ -9,31 +9,37 @@
 <body>
 
   <!-- Header -->
-  <header class="header">
-    <a href="../index.html">
-      <div class="logos">
-        <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
-      </div>
+<header class="header">
+  <a href="index.html">
+    <div class="logos">
+      <img src="img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+    </div>
+  </a>
+
+  <div class="titulo">
+    <h1>ReservArte</h1>
+  </div>
+
+
+  <div class="heads">
+    <div><a href="../index.html" class="menu">Menu Principal</a></div>
+    <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
+    <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
+    <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
+  </div>
+
+  <div class="head">
+    <!-- 🔹 Ícono del perfil (reemplaza Iniciar Sesión y Registrarse) -->
+    <a href="perfil.html" class="perfil-link">
+      <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Perfil de usuario" class="logo-perfil">
     </a>
-    <div class="titulo">
-      <h1>ReservArte</h1>
-    </div>
 
-    <div class="heads">
-      <div><a href="../index.html" class="menu">Menu Principal</a></div>
-      <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
-      <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
-      <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
-    </div>
-
-    <div class="head">
-      <a href="../inicio.html"><button class="iniciar">Iniciar Sesión</button></a>
-      <a href="../registrar.html"><button class="iniciar">Registrarse</button></a>
-      <a href="../carritoCompras.html" class="carrito-link">
-        <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
-      </a>
-    </div>
-  </header>
+    <!-- 🔹 Logo del carrito -->
+    <a href="carritoCompras.html" class="carrito-link">
+      <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
+    </a>
+  </div>
+</header>
 
   <!-- Contenedor general -->
   <section class="perfil-container">
@@ -46,8 +52,8 @@
         <li><a href="vendedor-eventos.html">🎭 Mis Eventos</a></li>
         <li><a href="vendedor-crear.html">📝 Crear Evento</a></li>
         <li><a href="vendedor-ventas.html">💰 Historial de Ventas</a></li>
-        <li><a href="vendedor-precios.html">🎟️ Gestión de Precios</a></li>
         <li><a href="vendedor-personalizar.html" class="active">🎨 Personalizar Perfil</a></li>
+                        <button id="cerrar-sesion" class="btn-cerrar">🔒 Cerrar Sesión</button>
       </ul>
     </aside>
 
@@ -60,34 +66,37 @@
         <!-- Formulario -->
         <form class="form-perfil">
           <div class="foto-perfil">
-            <img src="../img/perfil-default.png" alt="Foto de perfil">
+            <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Foto de perfil">
             <button class="btn-cambiar">Cambiar Foto</button>
           </div>
 
-          <div class="grupo-form">
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" value="Juan Pérez">
-          </div>
+<div class="grupo-form">
+  <label for="nombre">Nombre completo:</label>
+  <input type="text" id="nombre">
+</div>
 
-          <div class="grupo-form">
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" value="juanperez@example.com">
-          </div>
+<div class="grupo-form">
+  <label for="correo">Correo electrónico:</label>
+  <input type="email" id="correo">
+</div>
 
-          <div class="grupo-form">
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" value="300 456 7890">
-          </div>
+<div class="grupo-form">
+  <label for="CC">Número de identificación</label>
+  <input type="number" id="CC">
+</div>
 
-          <div class="grupo-form">
-            <label for="descripcion">Descripción o biografía:</label>
-            <textarea id="descripcion" rows="4">Organizador de eventos culturales y musicales.</textarea>
-          </div>
 
-          <div class="grupo-form">
-            <label for="color">Color de tema:</label>
-            <input type="color" id="color" value="#f4d7b1">
-          </div>
+<div class="grupo-form">
+  <label for="contrasena">Contraseña:</label>
+  <input type="password" id="contrasena">
+</div>
+<div class="grupo-form">
+  <label for="descripcion">Descripción o biografía:</label>
+  <textarea id="descripcion" rows="4"></textarea>
+</div>
+
+
+
 
           <div class="botones-accion">
             <button type="submit" class="btn-guardar">💾 Guardar Cambios</button>
@@ -99,16 +108,18 @@
         <div class="vista-previa">
           <h2>Vista Previa del Perfil</h2>
           <div class="preview-box">
-            <img src="../img/perfil-default.png" alt="Foto vista previa">
+            <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Foto vista previa">
             <h3>Juan Pérez</h3>
-            <p class="preview-correo">juanperez@example.com</p>
-            <p class="preview-telefono">📞 300 456 7890</p>
-            <p class="preview-descripcion">Organizador de eventos culturales y musicales.</p>
+            <p class="preview-correo"></p>
+            <p class="preview-telefono"></p>
+            <p class="preview-descripcion"></p>
           </div>
         </div>
       </div>
     </main>
   </section>
-
+<script src="../js/VendedorPersonalizas.js"></script>
+<script src="../js/Vendedor.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

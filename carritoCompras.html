@@ -27,10 +27,12 @@
   </div>
 
   <div class="head">
-    <a href="inicio.html"><button class="iniciar">Iniciar Sesión</button></a>
-    <a href="registrar.html"><button class="iniciar">Registrarse</button></a>
+    <!-- 🔹 Ícono del perfil (reemplaza Iniciar Sesión y Registrarse) -->
+    <a href="perfil.html" class="perfil-link">
+      <img src="img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Perfil de usuario" class="logo-perfil">
+    </a>
 
-    <!-- 🔹 Logo del carrito integrado -->
+    <!-- 🔹 Logo del carrito -->
     <a href="carritoCompras.html" class="carrito-link">
       <img src="img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
     </a>
@@ -38,80 +40,83 @@
 </header>
 
 
-  <main class="carrito-container">
-    <h2>🛍️ Carrito de Compras</h2>
+<main class="carrito-container">
+  <h2>🛍️ Carrito de Compras</h2>
 
-    <!-- Tabla de productos -->
-    <section class="carrito-lista">
-      <div class="carrito-item">
-        <div class="item-info">
-          <h3>🎶 Festival de Música</h3>
-          <p>Precio por boleta: <strong>$45.000</strong></p>
-        </div>
-        <div class="item-cantidad">
-          <label for="cantidad1">Cantidad:</label>
-          <input type="number" id="cantidad1" value="2" min="1">
-        </div>
-        <div class="item-total">
-          <p><strong>Total:</strong> $90.000</p>
-        </div>
-        <button class="btn-eliminar">🗑️</button>
+  <!-- Tabla de productos -->
+  <section class="carrito-lista">
+    <div class="carrito-item">
+      <div class="item-info">
+        <h3>🎶 Festival de Música</h3>
+        <p>Zona: <strong>VIP</strong></p>
+        <p>Precio por boleta: <strong>$45.000</strong></p>
       </div>
-
-      <div class="carrito-item">
-        <div class="item-info">
-          <h3>🎭 Teatro de Invierno</h3>
-          <p>Precio por boleta: <strong>$35.000</strong></p>
-        </div>
-        <div class="item-cantidad">
-          <label for="cantidad2">Cantidad:</label>
-          <input type="number" id="cantidad2" value="1" min="1">
-        </div>
-        <div class="item-total">
-          <p><strong>Total:</strong> $35.000</p>
-        </div>
-        <button class="btn-eliminar">🗑️</button>
+      <div class="item-cantidad">
+        <label for="cantidad1">Cantidad:</label>
+        <input type="number" id="cantidad1" value="2" min="1">
       </div>
-    </section>
-
-    <!-- Resumen del pedido -->
-    <section class="carrito-resumen">
-      <h3>Resumen de tu compra</h3>
-      <p><strong>Subtotal:</strong> $125.000</p>
-      <p><strong>IVA (19%):</strong> $23.750</p>
-      <hr>
-      <p class="total-final"><strong>Total a pagar:</strong> $148.750</p>
-
-      <div class="acciones">
-        <a href="Galeria.html" class="btn-seguir">⬅ Seguir comprando</a>
-        <a href="Pagos.html" class="btn-pagar">💳 Proceder al pago</a>
+      <div class="item-total">
+        <p><strong>Total:</strong> $90.000</p>
       </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="logo-container">
-<a href="menu.html">   
-   <div class="logo-footer">
-      <img src="img/95725e6a-19f1-4228-8d78-0731136b692c.png" alt="logo" class="imgs">
-    </div></a>
+      <button class="btn-eliminar">🗑️</button>
     </div>
-      <div class="line-container">
 
+    <div class="carrito-item">
+      <div class="item-info">
+        <h3>🎭 Teatro de Invierno</h3>
+        <p>Zona: <strong>General</strong></p>
+        <p>Precio por boleta: <strong>$35.000</strong></p>
+      </div>
+      <div class="item-cantidad">
+        <label for="cantidad2">Cantidad:</label>
+        <input type="number" id="cantidad2" value="1" min="1">
+      </div>
+      <div class="item-total">
+        <p><strong>Total:</strong> $35.000</p>
+      </div>
+      <button class="btn-eliminar">🗑️</button>
+    </div>
+  </section>
+
+  <!-- Resumen del pedido -->
+  <section class="carrito-resumen">
+    <h3>Resumen de tu compra</h3>
+    <p><strong>Subtotal:</strong> $125.000</p>
+    <p><strong>IVA (19%):</strong> $23.750</p>
+    <hr>
+    <p class="total-final"><strong>Total a pagar:</strong> $148.750</p>
+
+    <div class="acciones">
+      <a href="Galeria.html" class="btn-seguir">⬅ Seguir comprando</a>
+      <a href="Pagos.html" class="btn-pagar">💳 Proceder al pago</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="logo-container">
+    <a href="menu.html">   
+      <div class="logo-footer">
+        <img src="img/95725e6a-19f1-4228-8d78-0731136b692c.png" alt="logo" class="imgs">
+      </div>
+    </a>
+  </div>
+  <div class="line-container">
     <span class="line1"></span>
-
     <div class="logo">
-        <img src="img/insta.webp" alt="Logo">
+      <img src="img/insta.webp" alt="Logo">
     </div>
     <div class="logo">
-        <img src="img/twitter-new-logo-x.webp" alt="Logo">
+      <img src="img/twitter-new-logo-x.webp" alt="Logo">
     </div>
     <div class="logo">
-        <img src="img/6d0ae64489762fcf1c31ed88bdd852a3.jpg" alt="Logo">
+      <img src="img/6d0ae64489762fcf1c31ed88bdd852a3.jpg" alt="Logo">
     </div>
-
     <span class="line2"></span>
-</div>
-   
-  </footer>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
 </body>
 </html>

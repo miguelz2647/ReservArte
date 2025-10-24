@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Evento - ReservArte</title>
+
+    <link rel="stylesheet" href="../css/editar.css">
+</head>
+<body>
+
+<main class="perfil-content">
+    <h1>🎟️ Editar Evento</h1>
+    <p>Modifica los datos del evento, las zonas y el estado.</p>
+
+    <div class="form-editar">
+        <!-- Nombre del evento -->
+        <label for="nombre-evento">Nombre del Evento:</label>
+        <input type="text" id="nombre-evento" placeholder="Nombre del evento">
+
+        <!-- Fecha del evento -->
+        <label for="fecha-evento">Fecha del Evento:</label>
+        <input type="date" id="fecha-evento">
+
+        <!-- Hora del evento -->
+        <label for="hora-evento">Hora del Evento:</label>
+        <input type="time" id="hora-evento">
+
+        <!-- Lugar del evento -->
+        <label for="lugar-evento">Lugar del Evento:</label>
+        <input type="text" id="lugar-evento" placeholder="Lugar del evento">
+
+        <!-- Estado del evento -->
+        <label for="estado-evento">Estado del Evento:</label>
+        <select id="estado-evento" class="select-estado">
+            <option value="Pendiente">Pendiente</option>
+            <option value="En preventa">En Preventa</option>
+            <option value="Activo">Activo</option>
+            <option value="Finalizado">Finalizado</option>
+        </select>
+
+        <!-- Tabla de zonas -->
+        <table class="tabla-zonas">
+            <thead>
+                <tr>
+                    <th>Zona</th>
+                    <th>Capacidad</th>
+                    <th>Precio</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody id="zonas-body">
+                <!-- Se llenará desde JS -->
+            </tbody>
+        </table>
+
+        <!-- Botones -->
+        <div class="botones-editar">
+            <button id="guardar-cambios" class="btn-actualizar">💾 Guardar Cambios</button>
+            <a href="vendedor-eventos.html" class="btn-volver">⬅ Volver al Panel</a>
+        </div>
+
+        <div id="mensaje-editar"></div>
+    </div>
+</main>
+
+<script src="../js/main.js"></script>
+<script src="../js/vendedor-editar.js"></script>
+</body>
+</html>

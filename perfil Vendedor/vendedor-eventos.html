@@ -1,109 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReservArte - Mis Eventos</title>
-  <link rel="stylesheet" href="../css/vendedor.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReservArte - Mis Eventos</title>
+    <link rel="stylesheet" href="../css/vendedor.css">
 </head>
 <body>
 
-  <!-- Header -->
-<header class="header">
-  <a href="index.html">
-    <div class="logos">
-      <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
-    </div>
-  </a>
+    <header class="header">
+        <a href="index.html">
+            <div class="logos">
+                <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+            </div>
+        </a>
 
-  <div class="titulo">
-    <h1>ReservArte</h1>
-  </div>
+        <div class="titulo">
+            <h1>ReservArte</h1>
+        </div>
 
-  <div class="heads">
-    <div><a href="../index.html" class="menu">Menu Principal</a></div>
-    <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
-    <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
-    <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
-  </div>
+        <div class="heads">
+            <div><a href="../index.html" class="menu">Menu Principal</a></div>
+            <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
+            <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
+            <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
+        </div>
 
-  <div class="head">
-    <a href="../inicio.html"><button class="iniciar">Iniciar Sesión</button></a>
-    <a href="../registrar.html"><button class="iniciar">Registrarse</button></a>
+        <div class="head">
+            <a href="perfil.html" class="perfil-link">
+                <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Perfil de usuario" class="logo-perfil">
+            </a>
 
-    <!-- 🔹 Logo del carrito integrado -->
-    <a href="../carritoCompras.html" class="carrito-link">
-      <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
-    </a>
-  </div>
-</header>
+      <a href="../carritoCompras.html" class="carrito-link">
+        <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
+      </a>
+        </div>
+    </header>
+    <section class="perfil-container">
 
-  <!-- Contenedor general -->
-  <section class="perfil-container">
+        <aside class="sidebar">
+            <h2>Panel del Vendedor</h2>
+            <ul>
+                <li><a href="perfil_vendedor.html">🏠 Bienvenida</a></li>
+                <li><a href="vendedor-eventos.html" class="active">🎭 Mis Eventos</a></li>
+                <li><a href="vendedor-crear.html">📝 Crear Evento</a></li>
+                <li><a href="vendedor-ventas.html">💰 Historial de Ventas</a></li>
+                <li><a href="vendedor-Personalizar.html">🎨 Personalizar Perfil</a></li>
+                <button id="cerrar-sesion" class="btn-cerrar">🔒 Cerrar Sesión</button>
+            </ul>
+        </aside>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2>Panel del Vendedor</h2>
-      <ul>
-        <li><a href="perfil_vendedor.html" >🏠 Bienvenida</a></li>
-        <li><a href="vendedor-eventos.html"class="active">🎭 Mis Eventos</a></li>
-        <li><a href="vendedor-crear.html">📝 Crear Evento</a></li>
-        <li><a href="vendedor-ventas.html">💰 Historial de Ventas</a></li>
-        <li><a href="vendedor-precios.html">🎟️ Gestión de Precios</a></li>
-        <li><a href="vendedor-Personalizar.html">🎨 Personalizar Perfil</a></li>
-    </ul>
+<main class="perfil-content">
+            <h1>🎭 Mis Eventos</h1>
+            <p>Administra tus eventos activos, edita la información o consulta el estado de preventa.</p>
 
+            <div class="search-bar">
+                <input type="text" id="filtro-nombre-lugar" placeholder="Buscar por nombre o lugar..." class="input-search">
+                <select id="filtro-estado" class="select-filter">
+                    <option value="">Todos los Estados</option>
+                    <option value="Activo">Activo</option>
+                    <option value="En preventa">En preventa</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Finalizado">Finalizado</option>
+                </select>
+                <button type="button" id="btn-limpiar">Limpiar Filtros</button>
+            </div>
+            <table class="tabla-eventos">
+                <thead>
+                    <tr>
+                        <th>Nombre del Evento</th>
+                        <th>Fecha y hora</th>
+                        <th>Lugar</th>
+                        <th>Entradas Disponibles</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="eventos-body">
+                    </tbody>
+            </table>
+            
+            <div id="mensaje-eventos" style="margin-top: 20px;"></div>
 
-    </aside>
+        </main>
 
-    <!-- Contenido principal -->
-    <main class="perfil-content">
-      <h1>🎭 Mis Eventos</h1>
-      <p>Administra tus eventos activos, edita la información o consulta las preventas disponibles.</p>
+    </section>
 
-      <!-- Tabla de eventos -->
-      <table class="tabla-eventos">
-        <thead>
-          <tr>
-            <th>Nombre del Evento</th>
-            <th>Fecha</th>
-            <th>Lugar</th>
-            <th>Entradas Disponibles</th>
-            <th>Estado</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Festival de Arte Urbano</td>
-            <td>15 Nov 2025</td>
-            <td>Medellín</td>
-            <td>120</td>
-            <td>Activo</td>
-            <td class="acciones">
-              <button class="btn btn-editar">Editar</button>
-              <button class="btn btn-eliminar">Eliminar</button>
-              <a href="Preventa.html"><button class="btn btn-preventa">Ver preventa</button></a>
-            </td>
-          </tr>
-          <tr>
-            <td>Concierto Jazz Nights</td>
-            <td>02 Dic 2025</td>
-            <td>Bogotá</td>
-            <td>80</td>
-            <td>En preventa</td>
-            <td class="acciones">
-              <button class="btn btn-editar">Editar</button>
-              <button class="btn btn-eliminar">Eliminar</button>
-              <button class="btn btn-preventa">Ver preventa</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </main>
-
-  </section>
-
+    <script src="../js/main.js"></script>
+    <script src="../js/VendedorEventos.js"></script>
 </body>
 </html>

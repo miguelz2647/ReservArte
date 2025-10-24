@@ -28,6 +28,20 @@ html, body {
   flex-wrap: wrap;
   padding: 10px 30px;
 }
+.logo-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-right: 10px;
+}
+
+.logo-perfil:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
 
 .titulo {
   color: #f4d7b1;
@@ -320,3 +334,78 @@ html, body {
   background: #cda776;
   transform: scale(1.05);
 }
+
+.modal-rol {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-contenido {
+  background: #2a1c14;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  color: #f4d7b1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  width: 320px;
+}
+
+.modal-contenido h3 {
+  margin-bottom: 15px;
+  font-family: cursive;
+}
+
+.modal-contenido select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  border: none;
+  background: #3a2a1d;
+  color: #f4d7b1;
+}
+
+.modal-botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-guardar {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cerrar {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-cerrar:hover {
+  background-color: #e60000;
+}
+

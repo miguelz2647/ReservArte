@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReservArte - Gestión de Usuarios</title>
+  <link rel="stylesheet" href="../css/GestionUsuarios.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html">
+      <div class="logos">
+        <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+      </div>
+    </a>
+
+    <div class="titulo">
+      <h1>ReservArte</h1>
+    </div>
+
+    <div class="heads">
+      <div><a href="../index.html" class="menu">Menu Principal</a></div>
+      <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
+      <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
+      <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
+    </div>
+
+    <div class="head">
+      <a href="perfil.html" class="perfil-link">
+        <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Perfil de usuario" class="logo-perfil">
+      </a>
+
+      <a href="carritoCompras.html" class="carrito-link">
+        <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Administrador</h2>
+      <ul>
+        <li><a href="dashboard.html">🕹️ Dashboard</a></li>
+        <li><a href="Gestion de Eventos.html">🎟️ Gestión de Eventos</a></li>
+        <li><a href="Gestion De Ventas.html">💰 Gestión de Ventas</a></li>
+        <li><a href="Gestion de usuarios.html" class="active">👥 Gestión de Usuarios</a></li>
+        <li><a href="Graficas Generales.html">📊 Gráficas Generales</a></li>
+         <button id="cerrar-sesion" class="btn-cerrar">🔒 Cerrar Sesión</button>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+      <h1>👥 Gestión de Usuarios</h1>
+      <p class="subtitulo">Administra los usuarios del sistema: cambia roles o elimina cuentas.</p>
+
+      <!-- Barra de búsqueda y filtros -->
+      <div class="search-bar">
+        <input type="text" id="buscar-usuario" placeholder="Buscar por nombre o correo...">
+
+        <select id="filtro-rol">
+          <option value="">Filtrar por rol</option>
+          <option value="admin">Administrador</option>
+          <option value="vendedor">Vendedor</option>
+          <option value="cliente">Cliente</option>
+        </select>
+
+        <select id="filtro-estado">
+          <option value="">Filtrar por estado</option>
+          <option value="activo">Activo</option>
+          <option value="bloqueado">Bloqueado</option>
+        </select>
+
+        <button id="btn-buscar">Buscar</button>
+      </div>
+
+      <!-- Contenedor dinámico de usuarios -->
+      <div class="cards-usuarios">
+        <!-- Las tarjetas de usuarios se insertarán dinámicamente desde JS -->
+      </div>
+
+      <!-- Modal Cambiar Rol -->
+<div id="modal-cambiar-rol" class="modal-rol">
+  <div class="modal-contenido">
+    <h3>Cambiar Rol de Usuario</h3>
+    <select id="nuevo-rol">
+      <option value="admin">Administrador</option>
+      <option value="vendedor">Vendedor</option>
+      <option value="cliente">Cliente</option>
+    </select>
+    <div class="modal-botones">
+      <button id="guardar-rol" class="btn-guardar">Guardar</button>
+      <button id="cancelar-rol" class="btn-cancelar">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/GestionUsuarios.js"></script>
+</body>
+</html>

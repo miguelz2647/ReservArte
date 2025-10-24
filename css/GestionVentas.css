@@ -28,6 +28,20 @@ html, body {
   flex-wrap: wrap;
   padding: 10px 30px;
 }
+.logo-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-right: 10px;
+}
+
+.logo-perfil:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
 
 .titulo {
   color: #f4d7b1;
@@ -300,3 +314,17 @@ tbody td {
   font-size: 14px;
   outline: none;
 }
+.btn-cerrar {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-cerrar:hover {
+  background-color: #e60000;
+}
+

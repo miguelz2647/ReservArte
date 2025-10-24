@@ -178,8 +178,41 @@
 
 
 
+.logo-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-right: 10px;
+}
+
+.logo-perfil:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
 
 
+.error {
+  color: #ffffff;             /* Blanco brillante */
+  background-color: #1b130f;/* Rojo translúcido */
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.exito {
+  color: #ffffff;             /* Blanco brillante */
+  background-color: #1b130f;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center;
+}
 
 
 

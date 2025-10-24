@@ -1,0 +1,198 @@
+/* ====== RESET Y FONDO ====== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #f4d7b1;
+}
+
+/* ====== CONTENEDOR PRINCIPAL ====== */
+.perfil-content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: #1b130f;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(244, 215, 177, 0.2);
+}
+
+/* ====== TITULOS ====== */
+.perfil-content h1 {
+  font-family: cursive;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.perfil-content p {
+  color: #cbb89e;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ====== FORMULARIO GENERAL ====== */
+.form-editar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+/* ====== LABEL + INPUT ====== */
+.form-editar label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-editar input[type="text"],
+.form-editar input[type="date"],
+.form-editar input[type="time"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  background-color: #2a1d17;
+  color: #f4d7b1;
+  font-size: 0.95rem;
+}
+
+.form-editar input:focus {
+  outline: 2px solid #ffcf87;
+}
+
+/* ====== SELECT ESTADO ====== */
+.select-estado {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2a1d17;
+  color: #f4d7b1;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.select-estado:focus {
+  outline: 2px solid #ffcf87;
+}
+
+/* ====== TABLA DE ZONAS ====== */
+.tabla-zonas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tabla-zonas th,
+.tabla-zonas td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.tabla-zonas th {
+  background-color: #2a1d17;
+  color: #ffcf87;
+  font-family: cursive;
+}
+
+.tabla-zonas tr:nth-child(even) {
+  background-color: #221812;
+}
+
+.tabla-zonas tr:nth-child(odd) {
+  background-color: #1f1713;
+}
+
+/* ====== INPUTS DE ZONA ====== */
+.tabla-zonas input {
+  width: 80px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background-color: #2a1d17;
+  color: #fff;
+  text-align: center;
+}
+
+.tabla-zonas input:focus {
+  outline: 2px solid #ffcf87;
+}
+
+/* ====== BOTONES ====== */
+.btn-actualizar,
+#guardar-cambios {
+  background-color: #f4d7b1;
+  color: #1b130f;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-actualizar:hover,
+#guardar-cambios:hover {
+  background-color: #cda776;
+  transform: scale(1.05);
+}
+
+/* ====== BOTÓN VOLVER ====== */
+.btn-volver {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #8b0000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #a30000;
+  color: #fff;
+}
+
+/* ====== MENSAJES ====== */
+#mensaje-editar {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #ffcf87;
+  text-align: center;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 768px) {
+  .perfil-content {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .select-estado {
+    max-width: 100%;
+  }
+
+  .form-editar input[type="text"],
+  .form-editar input[type="date"],
+  .form-editar input[type="time"] {
+    width: 100%;
+  }
+
+  .tabla-zonas th,
+  .tabla-zonas td {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .tabla-zonas input {
+    width: 60px;
+    font-size: 0.85rem;
+  }
+}

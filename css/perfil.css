@@ -30,6 +30,20 @@ a {
   flex-wrap: wrap;
   padding: 10px 30px;
 }
+.logo-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-right: 10px;
+}
+
+.logo-perfil:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
 
 .titulo {
   color: #f4d7b1;
@@ -289,7 +303,13 @@ a {
   margin-bottom: 30px;
   box-shadow: 0 0 10px rgba(245, 212, 134, 0.2);
 }
-
+#usuarioImg123{
+    width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #f5d486;
+  object-fit: cover;
+}
 .perfil-avatar {
   width: 70px;
   height: 70px;
@@ -477,4 +497,47 @@ a {
 
 .boleta-card button:hover {
   background-color: #30211b;
+}
+
+
+.btn-cerrar {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+.btn-cerrar:hover {
+  background-color: #c0392b;
+}
+.foto-perfil {
+  text-align: center;
+}
+
+.foto-perfil img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #f4d7b1;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.btn-cambiar {
+  background-color: #f4d7b1;
+  color: #1b130f;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-cambiar:hover {
+  background-color: #cda776;
+  transform: scale(1.05);
 }

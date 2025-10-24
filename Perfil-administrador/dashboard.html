@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReservArte - Panel Administrador</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html">
+      <div class="logos">
+        <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+      </div>
+    </a>
+
+    <div class="titulo">
+      <h1>ReservArte</h1>
+    </div>
+
+    <div class="heads">
+      <div><a href="../index.html" class="menu">Menu Principal</a></div>
+      <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
+      <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
+      <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
+    </div>
+
+    <div class="head">
+      <a href="perfil.html" class="perfil-link">
+        <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Perfil de usuario" class="logo-perfil">
+      </a>
+      <a href="carritoCompras.html" class="carrito-link">
+        <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
+      </a>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <div class="admin-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Administrador</h2>
+      <ul>
+        <li><a href="dashboard.html">🕹️ Dashboard</a></li>
+        <li><a href="Gestion de Eventos.html">🎟️ Gestión de Eventos</a></li>
+        <li><a href="Gestion De Ventas.html">💰 Gestión de Ventas</a></li>
+        <li><a href="Gestion de usuarios.html">👥 Gestión de Usuarios</a></li>
+        <li><a href="Graficas Generales.html">📊 Gráficas Generales</a></li>
+        <li>  <button id="cerrar-sesion" class="btn-cerrar">🔒 Cerrar Sesión</button></li>
+
+
+      </ul>
+    </aside>
+
+    <!-- Contenido principal - Dashboard -->
+    <main class="main-content">
+      <h1>📊 Dashboard</h1>
+      <p class="subtitulo">Resumen general de tu sistema en tiempo real.</p>
+
+      <!-- Cards de estadísticas -->
+      <div class="cards">
+        <div class="card">
+          <h3>🎟️ Eventos Activos</h3>
+          <p class="numero" id="eventos-activos">0</p>
+        </div>
+        <div class="card">
+          <h3>💰 Ventas Totales</h3>
+          <p class="numero" id="ventas-totales">$0</p>
+        </div>
+        <div class="card">
+          <h3>👥 Usuarios Registrados</h3>
+          <p class="numero" id="usuarios-registrados">0</p>
+        </div>
+        <div class="card">
+          <h3>⭐ Satisfacción</h3>
+          <p class="numero" id="satisfaccion">0%</p>
+        </div>
+      </div>
+
+      <!-- Tabla de eventos más vendidos -->
+      <div class="tabla-dashboard">
+        <h2>Eventos Más Vendidos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Evento</th>
+              <th>Categoría</th>
+              <th>Fecha del Evento</th>
+              <th>Cierre de Ventas</th>
+              <th>Preventa</th>
+              <th>Boletos vendidos</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="eventos-mas-vendidos">
+            <!-- JS llenará las filas -->
+          </tbody>
+        </table>
+      </div>
+
+
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../js/main.js"></script>
+  <script src="../js/admin.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

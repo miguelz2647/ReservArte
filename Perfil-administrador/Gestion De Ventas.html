@@ -9,11 +9,11 @@
 <body>
   <!-- Header -->
 <header class="header">
-  <a href="index.html">
-    <div class="logos">
-      <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
-    </div>
-  </a>
+    <a href="index.html">
+      <div class="logos">
+        <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+      </div>
+    </a>
 
   <div class="titulo">
     <h1>ReservArte</h1>
@@ -27,15 +27,15 @@
   </div>
 
   <div class="head">
-    <a href="../inicio.html"><button class="iniciar">Iniciar Sesión</button></a>
-    <a href="../registrar.html"><button class="iniciar">Registrarse</button></a>
-
-    <!-- 🔹 Logo del carrito integrado -->
-    <a href="../carritoCompras.html" class="carrito-link">
+    <a href="perfil.html" class="perfil-link">
+      <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Perfil de usuario" class="logo-perfil">
+    </a>
+    <a href="carritoCompras.html" class="carrito-link">
       <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
     </a>
   </div>
 </header>
+
   <div class="admin-container">
     <!-- Sidebar -->
     <aside class="sidebar">
@@ -43,43 +43,46 @@
       <ul>
         <li><a href="dashboard.html">🕹️ Dashboard</a></li>
         <li><a href="Gestion de Eventos.html">🎟️ Gestión de Eventos</a></li>
-        <li><a href="Gestion De Ventas.html">💰 Gestión de Ventas</a></li>
+        <li><a href="Gestion De Ventas.html" class="active">💰 Gestión de Ventas</a></li>
         <li><a href="Gestion de usuarios.html">👥 Gestión de Usuarios</a></li>
         <li><a href="Graficas Generales.html">📊 Gráficas Generales</a></li>
+         <button id="cerrar-sesion" class="btn-cerrar">🔒 Cerrar Sesión</button>
       </ul>
     </aside>
 
-    <!-- Contenido principal - Gestión de Ventas -->
+    <!-- Contenido principal -->
     <main class="main-content">
       <h1>💰 Gestión de Ventas</h1>
       <p class="subtitulo">Visualiza todas las ventas realizadas por los vendedores.</p>
 
       <!-- Barra de búsqueda y filtros -->
       <div class="search-bar">
-        <input type="text" placeholder="Buscar por comprador...">
+        <input type="text" id="buscar-comprador" placeholder="Buscar por comprador...">
 
-        <select>
+        <!-- Categorías actualizadas -->
+        <select id="filtro-categoria">
           <option value="">Filtrar por categoría</option>
-          <option value="musica">Música</option>
-          <option value="deporte">Deporte</option>
-          <option value="teatro">Teatro</option>
+          <option value="Festivales">Festivales</option>
+          <option value="Conciertos">Conciertos</option>
+          <option value="Deportes">Deportes</option>
+          <option value="Conferencias">Conferencias</option>
+          <option value="Teatro">Teatro</option>
         </select>
 
-        <select>
+        <!-- Filtro dinámico de vendedores -->
+        <select id="filtro-vendedor">
           <option value="">Filtrar por vendedor</option>
-          <option value="juan">Juan Pérez</option>
-          <option value="ana">Ana Gómez</option>
-          <option value="lucia">Lucía Torres</option>
+          <!-- Los vendedores se agregarán automáticamente desde JS -->
         </select>
 
-        <!-- NUEVOS CAMPOS DE FILTRO POR FECHA -->
+        <!-- Filtros por fecha -->
         <label for="fecha-inicio">Desde:</label>
         <input type="date" id="fecha-inicio">
 
         <label for="fecha-fin">Hasta:</label>
         <input type="date" id="fecha-fin">
 
-        <button>Buscar</button>
+        <button id="btn-buscar">Buscar</button>
       </div>
 
       <!-- Tabla de ventas -->
@@ -90,6 +93,7 @@
               <th>#</th>
               <th>Comprador</th>
               <th>Evento</th>
+              <th>Categoría</th>
               <th>Vendedor</th>
               <th>Boletos</th>
               <th>Total</th>
@@ -98,36 +102,17 @@
           </thead>
           <tbody>
             <tr>
-              <td>001</td>
-              <td>Carlos López</td>
-              <td>Festival de Música</td>
-              <td>Juan Pérez</td>
-              <td>2</td>
-              <td>$100</td>
-              <td>10/10/2025</td>
-            </tr>
-            <tr>
-              <td>002</td>
-              <td>Laura Gómez</td>
-              <td>Festival de Música</td>
-              <td>Ana Gómez</td>
-              <td>1</td>
-              <td>$50</td>
-              <td>11/10/2025</td>
-            </tr>
-            <tr>
-              <td>003</td>
-              <td>Pedro Martínez</td>
-              <td>Teatro Clásico</td>
-              <td>Lucía Torres</td>
-              <td>3</td>
-              <td>$150</td>
-              <td>12/10/2025</td>
+              <td colspan="8" style="text-align:center; opacity:0.7;">
+                🧾 No se encontraron ventas registradas.
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
     </main>
   </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/GestionVentas.js"></script>
 </body>
 </html>

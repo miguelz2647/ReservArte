@@ -16,37 +16,26 @@
         <h1>ReservArte</h1>
       </div>
 
-      <!-- Información del comprador -->
-      <div class="ticket-info">
-        <h2>🎭 Festival de Música Medellín</h2>
-        <p><strong>Comprador:</strong> Miguel Zapata Montoya</p>
-        <p><strong>Cédula (CC):</strong> 1.045.239.678</p>
-        <p><strong>Fecha de compra:</strong> 10/10/2025</p>
-        <p><strong>Cantidad de boletas:</strong> 2</p>
-        <p><strong>Precio por boleta:</strong> $45.000</p>
-        <p><strong>Total pagado:</strong> $90.000</p>
-      </div>
+      <!-- Información del comprador (llenada dinámicamente) -->
+      <div class="ticket-info"></div>
 
-      <!-- Detalles del evento -->
-      <div class="ticket-evento">
-        <p><strong>Fecha del evento:</strong> 25/10/2025</p>
-        <p><strong>Lugar:</strong> Plaza Mayor, Medellín</p>
-        <p><strong>Estado:</strong> <span class="estado activa">Activa</span></p>
-      </div>
+      <!-- Detalles del evento (llenada dinámicamente) -->
+      <div class="ticket-evento"></div>
 
       <!-- Pie y acciones -->
       <div class="ticket-footer">
         <div class="codigo">
           <p><strong>Código QR / ID de boleta:</strong></p>
           <div class="qr-placeholder">[QR Aquí]</div>
-          <p class="codigo-id">#BOLETA-00231</p>
+          <p class="codigo-id"></p>
         </div>
 
         <button onclick="window.print()" class="btn-imprimir">🖨️ Imprimir Boleta</button>
-        <a href="perfil-boletas.html" class="btn-volver">⬅ Volver</a>
+        <a href="Historial.html" class="btn-volver">⬅ Volver</a>
       </div>
     </div>
   </section>
-
+<script src="../js/main.js"></script>
+  <script src="../js/VerBoleta.js"></script>
 </body>
 </html>

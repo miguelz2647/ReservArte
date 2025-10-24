@@ -28,6 +28,20 @@ html, body {
   flex-wrap: wrap;
   padding: 10px 30px;
 }
+.logo-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-right: 10px;
+}
+
+.logo-perfil:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
 
 .titulo {
   color: #f4d7b1;
@@ -287,8 +301,68 @@ html, body {
   background: #ffc107;
   color: #000;
 }
+.estado.preventa {
+  background: #ffc107;
+  color: #000;
+}
 
 .estado.cerrado {
   background: #dc3545;
   color: #fff;
 }
+
+/* ======== BOTÓN ELIMINAR EVENTO ======== */
+.btn-eliminar {
+  background-color: #ff4d4d;           /* Rojo suave pero visible */
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 12px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(255, 77, 77, 0.3);
+}
+
+/* Efecto hover */
+.btn-eliminar:hover {
+  background-color: #e63b3b;           /* Un rojo más oscuro */
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 77, 77, 0.5);
+}
+
+/* Efecto click */
+.btn-eliminar:active {
+  transform: scale(0.97);
+}
+
+/* Animación para eliminar visualmente la card */
+.card-evento.eliminando {
+  animation: fadeOut 0.4s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+.btn-cerrar {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-cerrar:hover {
+  background-color: #e60000;
+}
+

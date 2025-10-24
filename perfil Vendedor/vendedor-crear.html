@@ -1,114 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReservArte - Crear Evento</title>
-  <link rel="stylesheet" href="../css/vendedor.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReservArte - Crear Evento</title>
+    <link rel="stylesheet" href="../css/vendedor.css">
+    </head>
 <body>
 
-  <!-- Header general -->
-  <header class="header">
-    <a href="../index.html">
-      <div class="logos">
-        <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
-      </div>
-    </a>
+    <header class="header">
+        <a href="index.html">
+            <div class="logos">
+                <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+            </div>
+        </a>
 
-    <div class="titulo"><h1>ReservArte</h1></div>
+        <div class="titulo">
+            <h1>ReservArte</h1>
+        </div>
 
-    <div class="heads">
-      <div><a href="../index.html" class="menu">Menu Principal</a></div>
-      <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
-      <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
-      <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
-    </div>
+        <div class="heads">
+            <div><a href="../index.html" class="menu">Menu Principal</a></div>
+            <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
+            <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
+            <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
+        </div>
+        <div class="head">
+            <a href="perfil.html" class="perfil-link">
+                <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Perfil de usuario" class="logo-perfil">
+            </a>
 
-    <div class="head">
-      <a href="../inicio.html"><button class="iniciar">Iniciar Sesión</button></a>
-      <a href="../registrar.html"><button class="iniciar">Registrarse</button></a>
       <a href="../carritoCompras.html" class="carrito-link">
-        <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito" class="logo-carrito">
+        <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
       </a>
-    </div>
-  </header>
-
-  <section class="perfil-container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2>Panel del Vendedor</h2>
-      <ul>
-        <li><a href="perfil_vendedor.html">🏠 Bienvenida</a></li>
-        <li><a href="vendedor-eventos.html">🎭 Mis Eventos</a></li>
-        <li><a href="vendedor-crear.html" class="active">📝 Crear Evento</a></li>
-        <li><a href="vendedor-ventas.html">💰 Historial de Ventas</a></li>
-        <li><a href="vendedor-precios.html">🎟️ Gestión de Precios</a></li>
-        <li><a href="vendedor-Personalizar.html">🎨 Personalizar Perfil</a></li>
-      </ul>
-    </aside>
-
-    <!-- Contenido principal -->
-    <main class="perfil-content">
-      <h1>📝 Crear Nuevo Evento</h1>
-      <p>Completa los datos para agregar un nuevo evento a tu panel.</p>
-
-      <form class="crear-evento-form">
-        <label for="nombre">Nombre del Evento</label>
-        <input type="text" id="nombre" placeholder="Ej: Conferencia de Innovación" required>
-
-        <label for="fecha">Fecha</label>
-        <input type="date" id="fecha" required>
-
-        <label for="hora">Hora</label>
-        <input type="time" id="hora" required>
-
-        <label for="lugar">Lugar</label>
-        <input type="text" id="lugar" placeholder="Ej: Centro de Convenciones" required>
-
-        <label for="categoria">Categoría</label>
-        <select id="categoria" required>
-          <option value="">Selecciona una categoría</option>
-          <option value="Conciertos">Conciertos</option>
-          <option value="Teatro">Teatro</option>
-          <option value="Deporte">Deporte</option>
-          <option value="Conferencias">Conferencias</option>
-          <option value="Festivales">Festivales</option>
-        </select>
-
-        <label for="descripcion">Descripción</label>
-        <textarea id="descripcion" rows="4" placeholder="Agrega una breve descripción del evento..." required></textarea>
-
-        <label for="imagen">Imagen del evento</label>
-        <input type="file" id="imagen" accept="image/*">
-
-        <!-- 🟩 NUEVA SECCIÓN DE ZONAS -->
-        <div class="zonas-section">
-          <h2>🎟️ Zonas del Evento</h2>
-          <p>Agrega las zonas del evento. Cada zona puede tener su nombre, capacidad y precio.</p>
-
-          <div class="zona-bloque">
-            <label for="nombreZona">Nombre de la zona</label>
-            <input type="text" id="nombreZona" placeholder="Ej: VIP, General, Norte..." required>
-
-            <label for="capacidadZona">Capacidad</label>
-            <input type="number" id="capacidadZona" placeholder="Ej: 100" required>
-
-            <label for="precioZona">Precio por boleta</label>
-            <input type="number" id="precioZona" step="0.01" placeholder="Ej: 150000" required>
-
-            <button type="button" class="btn-guardar-zona">Guardar Zona</button>
-          </div>
-
-          <p class="nota">📝 Las demás zonas se podrán añadir dinámicamente más adelante con JavaScript.</p>
         </div>
+    </header>
+    <section class="perfil-container">
+        <aside class="sidebar">
+            <h2>Panel del Vendedor</h2>
+            <ul>
+                <li><a href="perfil_vendedor.html">🏠 Bienvenida</a></li>
+                <li><a href="vendedor-eventos.html">🎭 Mis Eventos</a></li>
+                <li><a href="vendedor-crear.html" class="active">📝 Crear Evento</a></li>
+                <li><a href="vendedor-ventas.html">💰 Historial de Ventas</a></li>
+                <li><a href="vendedor-Personalizar.html">🎨 Personalizar Perfil</a></li>
+                <button id="cerrar-sesion" class="btn-cerrar">🔒 Cerrar Sesión</button>
+            </ul>
+        </aside>
 
-        <div class="botones">
-          <button type="submit" class="btn-crear">Crear Evento</button>
-          <a href="vendedor-eventos.html" class="btn-volver">⬅ Volver</a>
-        </div>
-      </form>
-    </main>
-  </section>
+        <main class="perfil-content">
+            <h1>📝 Crear Nuevo Evento</h1>
+            <p>Completa los datos para agregar un nuevo evento a tu panel.</p>
+
+            <form class="crear-evento-form" id="crear-evento-form">
+                <label for="nombre">Nombre del Evento</label>
+                <input type="text" id="nombre" placeholder="Ej: Conferencia de Innovación" required>
+
+                <label for="fecha-apertura">Fecha del Evento</label>
+                <input type="date" id="fecha-apertura" required>
+
+                <label for="hora">Hora</label>
+                <input type="time" id="hora" required>
+
+                <label for="fecha-cierre">Fecha de Cierre de ventas</label>
+                <input type="date" id="fecha-cierre" required>
+
+                <label for="lugar">Lugar</label>
+                <input type="text" id="lugar" placeholder="Ej: Centro de Convenciones" required>
+
+                <label for="categoria">Categoría</label>
+                <select id="categoria" required>
+                    <option value="">Selecciona una categoría</option>
+                    <option value="Conciertos">Conciertos</option>
+                    <option value="Teatro">Teatro</option>
+                    <option value="Deporte">Deporte</option>
+                    <option value="Conferencias">Conferencias</option>
+                    <option value="Festivales">Festivales</option>
+                </select>
+
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" rows="4" placeholder="Agrega una breve descripción del evento..." ></textarea>
+
+                <label for="imagen">Imagen del evento</label>
+                <input type="file" id="imagen" accept="image/*"> 
+                
+                <div class="zonas-section">
+                    <h2>🎟️ Gestión de Zonas</h2>
+                    
+                    <div class="zona-input-block">
+                        <label for="nombre-zona">Nombre de la zona</label>
+                        <input type="text" id="nombre-zona" placeholder="Ej: VIP, General..." >
+
+                        <label for="capacidad-zona">Capacidad (Boletas)</label>
+                        <input type="number" id="capacidad-zona" min="1" placeholder="Ej: 100" >
+
+                        <label for="precio-zona">Precio por boleta ($)</label>
+                        <input type="number" id="precio-zona" step="0.01" min="0" placeholder="Ej: 150000" >
+
+                        <button type="button" id="btn-agregar-zona" class="btn-secundario">➕ Agregar Zona</button>
+                    </div>
+
+                    <h3>Zonas Añadidas:</h3>
+                    <div id="zonas-lista" class="zonas-lista">
+                        <p id="no-zonas-msg">Aún no has agregado ninguna zona.</p>
+                    </div>
+                    
+                    <div id="mensaje-zonas" style="margin-top: 15px;"></div>
+                </div>
+                
+                <div id="mensaje-form" style="margin-top: 20px;"></div>
+
+                <div class="botones">
+                    <button type="submit" class="btn-crear">✅ Crear Evento</button>
+                    <a href="vendedor-eventos.html" class="btn-volver">⬅ Mis Eventos</a>
+                </div>
+            </form>
+        </main>
+    </section>
+
+    <script src="../js/main.js"></script>
+<script src="../js/main.js"></script>
+    <script src="../js/vendedorCrear.js"></script> 
 </body>
 </html>

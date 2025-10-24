@@ -9,16 +9,16 @@
 </head>
 <body>
 <header class="header">
-  <a href="index.html">
-    <div class="logos">
-      <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
-    </div>
-  </a>
-
+    <a href="index.html">
+      <div class="logos">
+        <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+      </div>
+    </a>
   <div class="titulo">
     <h1>ReservArte</h1>
   </div>
 
+ 
   <div class="heads">
     <div><a href="../index.html" class="menu">Menu Principal</a></div>
     <div><a href="../Galeria.html" class="menu">Festivales y Eventos</a></div>
@@ -27,11 +27,13 @@
   </div>
 
   <div class="head">
-    <a href="../inicio.html"><button class="iniciar">Iniciar Sesión</button></a>
-    <a href="../registrar.html"><button class="iniciar">Registrarse</button></a>
+    <!-- 🔹 Ícono del perfil (reemplaza Iniciar Sesión y Registrarse) -->
+    <a href="perfil.html" class="perfil-link">
+      <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Perfil de usuario" class="logo-perfil">
+    </a>
 
-    <!-- 🔹 Logo del carrito integrado -->
-    <a href="../carritoCompras.html" class="carrito-link">
+    <!-- 🔹 Logo del carrito -->
+     <a href="carritoCompras.html" class="carrito-link">
       <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
     </a>
   </div>
@@ -46,6 +48,7 @@
         <li><a href="Gestion De Ventas.html">💰 Gestión de Ventas</a></li>
         <li><a href="Gestion de usuarios.html">👥 Gestión de Usuarios</a></li>
         <li><a href="Graficas Generales.html">📊 Gráficas Generales</a></li>
+         <button id="cerrar-sesion" class="btn-cerrar">🔒 Cerrar Sesión</button>
       </ul>
     </aside>
 
@@ -105,5 +108,6 @@
   </div>
 
   <script src="../js/graficas.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

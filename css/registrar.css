@@ -190,6 +190,20 @@
 
 
 
+.logo-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-right: 10px;
+}
+
+.logo-perfil:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
 
 
 /* ------------------------------ */
@@ -200,6 +214,27 @@
   color:#bbb;
 }
 
+.error {
+  color: #ffffff;             /* Blanco brillante */
+  background-color: rgba(255, 0, 0, 0.3);  /* Rojo translúcido */
+  border: 1px solid #ff4d4d;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.exito {
+  color: #ffffff;             /* Blanco brillante */
+  background-color: rgba(0, 200, 83, 0.3);  /* Verde translúcido */
+  border: 1px solid #00e676;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center;
+}
 
 
 
@@ -249,4 +284,11 @@
 /* 1920x1080 - Escritorio grande */
 @media screen and (max-width: 1920px) {
     /* Aquí casi no necesitas cambios, pero puedes ajustar márgenes */
+}
+
+
+.mensaje {
+  color: #cda776;
+    margin-top: 10px;
+    font-weight: bold;
 }

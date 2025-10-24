@@ -9,15 +9,15 @@
 <body>
   <!-- Header -->
 <header class="header">
-  <a href="index.html">
-    <div class="logos">
-      <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
-    </div>
-  </a>
-
+    <a href="index.html">
+      <div class="logos">
+        <img src="../img/22617fb3-69c1-429d-8eb7-dde11e9586b8.png" alt="logo" class="img">
+      </div>
+    </a>
   <div class="titulo">
     <h1>ReservArte</h1>
   </div>
+
 
   <div class="heads">
     <div><a href="../index.html" class="menu">Menu Principal</a></div>
@@ -25,13 +25,14 @@
     <div><a href="../acercaDe.html" class="menu">Acerca De..</a></div>
     <div><a href="../contactanos.html" class="menu">Contáctanos</a></div>
   </div>
-
   <div class="head">
-    <a href="../inicio.html"><button class="iniciar">Iniciar Sesión</button></a>
-    <a href="../registrar.html"><button class="iniciar">Registrarse</button></a>
+    <!-- 🔹 Ícono del perfil (reemplaza Iniciar Sesión y Registrarse) -->
+    <a href="perfil.html" class="perfil-link">
+      <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Perfil de usuario" class="logo-perfil">
+    </a>
 
-    <!-- 🔹 Logo del carrito integrado -->
-    <a href="../carritoCompras.html" class="carrito-link">
+    <!-- 🔹 Logo del carrito -->
+     <a href="carritoCompras.html" class="carrito-link">
       <img src="../img/ChatGPT Image 20 oct 2025, 18_58_19.png" alt="Carrito de compras" class="logo-carrito">
     </a>
   </div>
@@ -45,7 +46,7 @@
         <li><a href="perfil.html">🏠 Bienvenida</a></li>
         <li><a href="Mi_informacion.html" class="active">👤 Mi Información</a></li>
         <li><a href="Historial.html">🧾 Historial de Compras</a></li>
-        <li><a href="perfil-boletas.html">🎟️ Boletas Activas</a></li>
+
       </ul>
     </aside>
 
@@ -55,15 +56,22 @@
 
       <!-- Card superior del usuario -->
       <div class="perfil-header">
-        <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Usuario" class="perfil-avatar" />
+     <div class="foto-perfil">
+            <a href="perfil.html" class="perfil-link">
+      <img src="../img/1aae286a-55ea-44b5-922f-e7148dbd726e.png" alt="Perfil de usuario" class="logo-perfil" id="usuarioImg123">
+    </a>
+</div>
         <div>
           <h2>Miguel Zapata</h2>
           <p>Miembro desde 2023</p>
         </div>
+         <button class="btn-cambiar">Cambiar Foto</button>
       </div>
 
       <!-- Mensaje de éxito (visual) -->
-      <p class="mensaje-exito">✔️ Tu información se ha actualizado correctamente.</p>
+<!-- Mensaje de éxito (visual) -->
+<p class="mensaje-exito" style="display:none;">✔️ Tu información se ha actualizado correctamente.</p>
+
 
       <div class="info-cards">
         <!-- Card 1: Información actual -->
@@ -107,5 +115,14 @@
       </div>
     </main>
   </section>
+
+
+
+
+  <script src="../js/Usuario.js"></script>
+<script src="../js/Cliente.js"></script>
+<script src="../js/InfoCliente.js"></script>
+<script src="../js/main.js"></script>
+  
 </body>
 </html>
