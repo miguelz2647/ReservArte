@@ -35,7 +35,7 @@ class GestionEventosAdmin {
       card.innerHTML = `
         <h2>${evento.nombre}</h2>
       <p>
-        <span class="fecha-evento"><strong>Fecha:</strong> ${evento.fecha}</span> | 
+  <span class="fecha-evento"><strong>Fecha:</strong> ${evento.fechaEvento}</span> | 
         <span class="lugar-evento"><strong>Lugar:</strong> ${evento.lugar || "Sin definir"}</span> |
         <span class="cierre-ventas"><strong>Cierre de ventas:</strong> ${evento.fechaCierre || "Sin definir"}</span> |
         <span class="vendedor-evento"><strong>Vendedor:</strong> ${evento.vendedor || "Sin definir"}</span>

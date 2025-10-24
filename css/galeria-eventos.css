@@ -216,19 +216,62 @@ a {
   color:#ddd;
   font-size:0.95rem;
 }
-.categoria input[type="checkbox"]{ accent-color: var(--accent); margin-right:8px; }
-.btn-filtrar{
-  width:100%;
-  margin-top:12px;
-  padding:10px 12px;
-  background: var(--accent);
-  color:#000;
-  border:none;
-  border-radius:8px;
-  font-weight:700;
-  cursor:pointer;
+.categoria {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
-.btn-filtrar:hover{ filter:brightness(.98); }
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 2px solid var(--accent, #007bff);
+  border-radius: 50%;
+}
+
+.radio-container input:checked ~ .checkmark {
+  background-color: var(--accent, #007bff);
+  border-color: var(--accent, #007bff);
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .checkmark::after {
+  display: block;
+  left: 4px;
+  top: 4px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
 
 /* ======= FOOTER ======= */
 

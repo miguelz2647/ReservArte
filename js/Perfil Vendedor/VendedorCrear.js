@@ -1,5 +1,5 @@
 // ==================================
-// VENDEDOR - CREAR EVENTO (adaptado para permitir campos vacíos)
+// VENDEDOR - CREAR EVENTO (adaptado para permitir campos vacíos y guardar imagen como Base64)
 // ==================================
 document.addEventListener("DOMContentLoaded", () => {
     const formEl = document.getElementById("crear-evento-form");
@@ -92,10 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const categoria = document.getElementById('categoria').value;
         const descripcion = document.getElementById('descripcion').value.trim();
         const imagenInput = document.getElementById('imagen');
-        let imagen = 'default-evento.jpg';
-        if (imagenInput.files.length > 0) imagen = imagenInput.files[0].name;
 
-        // Solo los campos esenciales son obligatorios
+        // Validación de campos obligatorios
         if (!nombre || !fechaApertura || !hora || !fechaCierre || !lugar || !categoria) {
             mostrarMensaje(mensajeFormEl, 'error', 'Completa los campos obligatorios'); 
             return;
@@ -105,32 +103,44 @@ document.addEventListener("DOMContentLoaded", () => {
         const ahora = new Date();
         if (fechaObj <= ahora) { mostrarMensaje(mensajeFormEl, 'error', 'La fecha del evento debe ser futura'); return; }
 
-        // Las zonas y descripción pueden estar vacías
         const stockTotal = zonasTemporales.reduce((sum, z) => sum + z.capacidad, 0);
 
-        const nuevoEvento = {
-            id: Date.now().toString(),
-            vendedor: usuario.nombre,
-            nombre: nombre,
-            fechaEvento: fechaApertura,
-            hora: hora,
-            fechaCierre: fechaCierre,
-            lugar: lugar,
-            categoria: categoria,
-            descripcion: descripcion, // puede ir vacío
-            imagen: imagen,
-            stock: stockTotal,
-            stockVendido: 0,
-            zonas: zonasTemporales,  // puede estar vacío
-            estado: "Pendiente"
+        // Función para guardar el evento en localStorage
+        const guardarEvento = (imagenBase64) => {
+            const nuevoEvento = {
+                id: Date.now().toString(),
+                vendedor: usuario.nombre,
+                nombre: nombre,
+                fechaEvento: fechaApertura,
+                hora: hora,
+                fechaCierre: fechaCierre,
+                lugar: lugar,
+                categoria: categoria,
+                descripcion: descripcion,
+                imagen: imagenBase64 || 'default-evento.jpg', // usa Base64 o default
+                stock: stockTotal,
+                stockVendido: 0,
+                zonas: zonasTemporales,
+                estado: "Pendiente"
+            };
+
+            let eventos = JSON.parse(localStorage.getItem("eventos")) || [];
+            eventos.push(nuevoEvento);
+            localStorage.setItem("eventos", JSON.stringify(eventos));
+
+            mostrarMensaje(mensajeFormEl, 'exito', 'Evento creado. Pendiente de revisión.');
+            setTimeout(() => { window.location.href = 'vendedor-eventos.html'; }, 2000);
         };
 
-        let eventos = JSON.parse(localStorage.getItem("eventos")) || [];
-        eventos.push(nuevoEvento);
-        localStorage.setItem("eventos", JSON.stringify(eventos));
-
-        mostrarMensaje(mensajeFormEl, 'exito', 'Evento creado. Pendiente de revisión.');
-        setTimeout(() => { window.location.href = 'vendedor-eventos.html'; }, 2000);
+        // Si se seleccionó imagen, convertir a Base64
+        if (imagenInput.files.length > 0) {
+            const file = imagenInput.files[0];
+            const reader = new FileReader();
+            reader.onload = () => guardarEvento(reader.result);
+            reader.readAsDataURL(file);
+        } else {
+            guardarEvento(null);
+        }
     });
 
     // ---------------------------------
@@ -143,16 +153,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderizarZonas();
 });
+
+// ---------------------------------
+// Cerrar sesión
+// ---------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const cerrarSesionBtn = document.getElementById('cerrar-sesion');
 
     if (cerrarSesionBtn) {
         cerrarSesionBtn.addEventListener('click', () => {
-            // Eliminar todas las claves de sesión relevantes
             localStorage.removeItem('usuarioActivo'); 
             localStorage.removeItem('usuarioLoggeado'); 
             localStorage.removeItem('esAdmin');         
-            
             window.location.href = '../inicio.html';
         });
     }

@@ -172,6 +172,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: #0b0b0b;
+  gap: 10px;
 }
 
 .titulo-conciertos {
@@ -192,7 +193,7 @@ body {
 .concierto-proximo {
   background-color: #3f2a20;
   padding: 15px;
-  width: 250px;
+  width: 300px;
   height: 400px; /* 🔹 Alto fijo para todas las tarjetas */
   border-radius: 12px;
   display: flex;
@@ -329,3 +330,21 @@ body {
   }
 }
  
+
+.mensaje-vacio {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    padding: 20px 0;
+}
+
+/* Estado del evento */
+.estado-concierto {
+    margin-top: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 0.9rem;
+color: #f4d7b1
+}
+

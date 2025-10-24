@@ -45,65 +45,20 @@
   <main class="contenedor">
 
     <!-- GALERÍA (IZQUIERDA) -->
-    <section class="galeria">
-      <h1>Explora Nuestros Eventos</h1>
+  <!-- GALERÍA (IZQUIERDA) -->
+<section class="galeria">
+  <h1>Explora Nuestros Eventos</h1>
 
-      <div class="eventos-grid">
-      <a href="ver-evento.html">
-        <article class="evento" data-categoria="festival">
-          <img src="img/concert1.jpg" alt="Festival de Música">
-          <div class="info">
-            <h3>Festival de Música</h3>
-            <p>Vive una experiencia inolvidable con los mejores artistas.</p>
-          </div>
-        </article></a>
+  <div class="eventos-grid">
+    <!-- Aquí se generarán los eventos desde JS -->
+  </div>
 
-        <article class="evento" data-categoria="concierto">
-          <img src="img/concert2.jpg" alt="Concierto Rock">
-          <div class="info">
-            <h3>Concierto Rock</h3>
-            <p>Una noche cargada de energía y pasión musical.</p>
-          </div>
-        </article>
+  <!-- BOTÓN VER MÁS -->
+  <div class="ver-mas">
+    <button>Ver más</button>
+  </div>
+</section>
 
-        <article class="evento" data-categoria="futbol">
-          <img src="img/partido2.jpg" alt="Partido de fútbol">
-          <div class="info">
-            <h3>Partido de Fútbol</h3>
-            <p>Vive la emoción del deporte con tu equipo favorito.</p>
-          </div>
-        </article>
-
-        <article class="evento" data-categoria="conferencia">
-          <img src="img/concert3.jpg" alt="Conferencia de Innovación">
-          <div class="info">
-            <h3>Conferencia de Innovación</h3>
-            <p>Aprende de los mejores expertos en tecnología y creatividad.</p>
-          </div>
-        </article>
-
-        <article class="evento" data-categoria="teatro">
-          <img src="img/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg" alt="Obra de Teatro">
-          <div class="info">
-            <h3>Obra de Teatro</h3>
-            <p>Disfruta de una puesta en escena cautivante e inspiradora.</p>
-          </div>
-        </article>
-        
-                <article class="evento" data-categoria="teatro">
-          <img src="img/partido1.jpg" alt="Obra de Teatro">
-          <div class="info">
-            <h3>Obra de Teatro</h3>
-            <p>Disfruta de una puesta en escena cautivante e inspiradora.</p>
-          </div>
-        </article>
-      </div>
-
-      <!-- BOTÓN VER MÁS -->
-      <div class="ver-mas">
-        <button>Ver más</button>
-      </div>
-    </section>
 
     <!-- PANEL LATERAL (DERECHA) -->
     <aside class="filtros" aria-label="Filtros de búsqueda">
@@ -111,15 +66,33 @@
       <input type="text" id="busqueda" placeholder="Buscar por nombre...">
 
       <h3>Categorías</h3>
-      <div class="categoria">
-        <label><input type="checkbox" value="festival" checked> Festivales</label>
-        <label><input type="checkbox" value="concierto" checked> Conciertos</label>
-        <label><input type="checkbox" value="Deportes" checked> Deportes</label>
-        <label><input type="checkbox" value="conferencia" checked> Conferencias</label>
-        <label><input type="checkbox" value="teatro" checked> Teatro</label>
-      </div>
+<div class="categoria">
+  <label class="radio-container">Ninguna
+    <input type="radio" name="categoria" value="" checked>
+    <span class="checkmark"></span>
+  </label>
+  <label class="radio-container">Festivales
+    <input type="radio" name="categoria" value="festival">
+    <span class="checkmark"></span>
+  </label>
+  <label class="radio-container">Conciertos
+    <input type="radio" name="categoria" value="concierto">
+    <span class="checkmark"></span>
+  </label>
+  <label class="radio-container">Deportes
+    <input type="radio" name="categoria" value="deportes">
+    <span class="checkmark"></span>
+  </label>
+  <label class="radio-container">Conferencias
+    <input type="radio" name="categoria" value="conferencia">
+    <span class="checkmark"></span>
+  </label>
+  <label class="radio-container">Teatro
+    <input type="radio" name="categoria" value="teatro">
+    <span class="checkmark"></span>
+  </label>
+</div>
 
-      <button class="btn-filtrar">Aplicar Filtros</button>
     </aside>
 
   </main>
@@ -153,5 +126,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/Galeria.js"></script>
 </body>
 </html>
