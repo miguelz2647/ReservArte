@@ -12,7 +12,6 @@ Desarrollar una plataforma web segura y accesible que permita gestionar de forma
 
 ## 🎯 Objetivos Específicos
 - Facilitar el registro de usuarios con formularios seguros.  
-- Permitir la selección visual de asientos por zonas.  
 - Implementar un panel administrativo para la gestión de eventos.  
 - Garantizar la seguridad y transparencia en las transacciones.  
 - Diseñar una interfaz moderna y adaptable a cualquier dispositivo.  
